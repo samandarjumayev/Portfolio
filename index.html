@@ -12,6 +12,10 @@
 
 <body>
 
+    <div class="loader">
+        <img src="./gif/load.gif" alt="loader gifi bor">
+    </div>
+
     <section class="mainly">
         
         <header class="header">
@@ -211,6 +215,15 @@
 
         </div>
     </footer>
+
+
+    <script>
+        let loader = document.querySelector(".loader");
+  
+        setTimeout(() => {
+          loader.classList.add("loader-none");
+        }, 2000);
+    </script>
 
 </body>
 </html>
