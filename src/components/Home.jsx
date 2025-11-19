@@ -81,10 +81,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        <div className='absolute bottom-0 right-0'>
-              <SamandarAnimation />
-        </div>
       </section>
 
       {/* SKILLS SCROLLING BAR */}
