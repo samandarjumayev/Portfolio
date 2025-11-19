@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { Mail, Github, Linkedin, Instagram, ArrowUpRight } from 'lucide-react';
 import { UserContext } from '../App';
 import myPhoto from '../images/Samandar.jpg';
+import SunCloud from '../ui/SunCloud';
 
 export default function Home() {
   // const [isDark, setIsDark] = useState(true);
@@ -47,13 +48,14 @@ export default function Home() {
     <div className={`${isDark ? 'bg-slate-950 text-white' : 'bg-white text-slate-900'} min-h-screen transition-colors duration-300`}>
 
       {/* HERO SECTION */}
-      <section className={`${isDark ? 'bg-slate-900' : 'bg-blue-50'} py-30 px-4 transition-colors duration-300`}>
+      <section className={`${isDark ? 'bg-slate-900' : 'bg-blue-50'} md:py-30 py-7 px-4 transition-colors duration-300`}>
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* CODE FRAME */}
           <div className="flex justify-center">
-            <div className={`${isDark ? 'border-cyan-400' : 'border-blue-500'} border-2 w-48 h-48 flex items-end justify-center relative`}>
-              <div className={`absolute top-0 left-0 w-full h-full flex items-center justify-center ${isDark ? 'text-cyan-400' : 'text-blue-500'} text-4xl font-bold opacity-20`}>
-                {'</>'}
+            <div className={`w-58 h-58 flex items-end justify-center relative`}>
+              <div className={`absolute top-0 left-0 w-full h-full flex items-center justify-center ${isDark ? 'text-cyan-400' : 'text-blue-500'} md:scale-130 text-4xl font-bold`}>
+                {/* {'</>'} */}
+                <SunCloud />
               </div>
             </div>
           </div>
