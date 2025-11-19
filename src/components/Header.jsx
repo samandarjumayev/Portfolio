@@ -14,7 +14,7 @@ export default function Header(){
                     Jumayev <span className={isDark ? 'text-cyan-400' : 'text-blue-500'}>/</span>
                 </h1>
                 
-                <nav className="hidden md:flex gap-8 items-center">
+                <nav className="hidden md:flex gap-8 items-center font-medium">
                     <NavLink to={'/'} className={({isActive}) => isActive ? `${isDark ? `text-cyan-400` : `text-blue-500`}` : `` }>Home</NavLink>
                     <NavLink to={'/about'} className={({isActive}) => isActive ? `${isDark ? `text-cyan-400` : `text-blue-500`}` : `` }>About</NavLink>
                     <NavLink to={'/projects'} className={({isActive}) => isActive ? `${isDark ? `text-cyan-400` : `text-blue-500`}` : `` }>Projects</NavLink>

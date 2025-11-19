@@ -1,31 +1,31 @@
-import { useContext } from 'react';
-import { Mail, Github, Linkedin, Instagram, ArrowUpRight } from 'lucide-react';
+import { useContext, useState } from 'react';
+import { Mail, Github, Linkedin, Instagram, ArrowUpRight, Sun } from 'lucide-react';
 import { UserContext } from '../App';
-import myPhoto from '../images/Samandar.jpg';
 import SunCloud from '../ui/SunCloud';
 import SmileAnimation from '../ui/SmileAnimation';
+import SamandarAnimation from '../ui/SamandarAnimation';
 
 export default function Home() {
   // const [isDark, setIsDark] = useState(true);
-  const {isDark, setIsDark} = useContext(UserContext)
+  const {isDark, setIsDark} = useContext(UserContext);
 
   const skills = ['HTML', 'CSS', 'SASS', 'Tailwind CSS', 'JavaScript', 'React JS', 'GitHub', 'Redux Toolkit'];
   
   const experiences = [
     {
-      date: 'Jun 2023-Aug 2024',
-      title: 'Lorem | Ispsum',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada sodales finibus. Donec eget est nec nulla interdum facilisis. Praesent in tellus elementum, euismod quam id, vulputate lectus. Mauris rutrum risus ac mi feugiat gravida. Ut rhoncus libero finibus lorem finibus, vel laoreet nunc hendrerit. Integer nec elementum felis.'
+      date: 'Sep 2012-May 2023',
+      title: '23-maktab',
+      desc: 'Men 2012-yili 7-yoshimda maktabga chiqqanman. Jarqo\'rg\'on tumanidagi "Muqimiy nomidagi" 23-maktabda tahsil olganman va 2023-yili shu maktabni tamomlaganman. Maktabni tugatiboq O\'qishga GRANT asosida qabul qilinganman.'
     },
     {
-      date: 'Jun 2022-Dec 2022',
-      title: 'Ispsum | Lorem',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada sodales finibus. Donec eget est nec nulla interdum facilisis. Praesent in tellus elementum, euismod quam id, vulputate lectus. Mauris rutrum risus ac mi feugiat gravida. Ut rhoncus libero finibus lorem finibus, vel laoreet nunc hendrerit.'
+      date: 'Sep 2022-Aug 2023',
+      title: 'Termiz | Galaktika o\'quv markazi',
+      desc: '2022-yil sentabr oyida, Matematika va Fizika fanlaridan chuqur tayyorlanish uchun Termiz shaharga repititorga borganman. Termizda "Galaktika" o\'quv markazida ustozim Mirjalol aka Matematika fanidan tayyorlagan. Abiturientlik davrida ham o\'ziga yarasha qiyinchiliklar bo\'lgan, lekin yaxshi davr bo\'lgan'
     },
     {
-      date: 'Aug 2019-Dec 2020',
-      title: 'Lorem Ispsum | Lorem Ispsum',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada sodales finibus. Donec eget est nec nulla interdum facilisis. Praesent in tellus elementum, euismod quam id, vulputate lectus. Mauris rutrum risus ac mi feugiat gravida. Ut rhoncus libero finibus lorem finibus, vel laoreet nunc hendrerit. Integer nec elementum felis.'
+      date: 'Sep 2023- ... 2027',
+      title: 'TATU | Samarqand',
+      desc: '2023-yil 6-avgust kuni ertalab DTM imtihoniga kirganman va 3 soat davomida 2 ta Asosiy va 3 ta Majburiy fanlardan imtihon topshirganman, DTM Natijam 20-avgust kuni chiqqan va Men 118 ball bilan Toshkent Axborot Texnologiyalari Universiteti Samarqand filialiga Grant asosida 🎓Talaba🎓 bo\'ldim Alhamdulillah'
     }
   ];
 
@@ -49,13 +49,12 @@ export default function Home() {
     <div className={`${isDark ? 'bg-slate-950 text-white' : 'bg-white text-slate-900'} min-h-screen transition-colors duration-300`}>
 
       {/* HERO SECTION */}
-      <section className={`${isDark ? 'bg-slate-900' : 'bg-blue-50'} md:py-30 py-7 px-4 transition-colors duration-300`}>
+      <section className={`${isDark ? 'bg-slate-900' : 'bg-blue-50'} relative md:py-30 py-7 px-4 transition-colors duration-300`}>
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* CODE FRAME */}
           <div className="flex justify-center">
             <div className={`w-58 h-58 flex items-end justify-center relative`}>
               <div className={`absolute top-0 left-0 w-full h-full flex items-center justify-center ${isDark ? 'text-cyan-400' : 'text-blue-500'} md:scale-130 text-4xl font-bold`}>
-                {/* {'</>'} */}
                 <SunCloud />
               </div>
             </div>
@@ -81,6 +80,10 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </div>
+
+        <div className='absolute bottom-0 right-0'>
+              <SamandarAnimation />
         </div>
       </section>
 
@@ -124,9 +127,9 @@ export default function Home() {
             </div>
             
             <div className={`${isDark ? 'text-slate-300' : 'text-slate-700'} space-y-4 leading-relaxed`}>
-              <p className="text-lg font-semibold text-white">Kuchli dasturchi bo'lish yo'lida izchil rivojlanayotgan dasturchi..</p>
-              <p>Currently my focus is on learning and mastering essential web development skills. I have a solid foundation in HTML, CSS, Git and Javascript</p>
-              <p>Currently my focus is on learning and mastering essential web development skills. I have a solid foundation in</p>
+              <p className="text-lg font-semibold">Kuchli <span className={`${isDark ? `text-cyan-400` : `text-blue-500`}  transition-colors duration-100`}>Frontend</span>chi bo'lish yo'lida izchil rivojlanayotgan dasturchi..</p>
+              <p>Men <span className={`${isDark ? `text-cyan-400` : `text-blue-500`} font-medium`}>Toshkent Axborot Texnologiyalari Universiteti</span>ning 3-kurs talabasi bo‘lib, shu bilan birga <span className='text-[#eca100] font-medium'>Najot Ta'limda</span> Frontend yo‘nalishida o‘qiyapman. Hozirgi maqsadim — zamonaviy web texnologiyalarini chuqur o‘rganib, kuchli Frontend dasturchi darajasiga yetish va real loyihalar orqali tajribamni oshirishdir.</p>
+              <p>HTML, CSS, SASS, JavaScript (ES6+), DOM, async/await, Promise, fetch API, Git, React JS (hooks), Tailwind CSS.</p>
             </div>
           </div>
         </div>
@@ -184,7 +187,7 @@ export default function Home() {
       <section id="contact" className={`${isDark ? 'bg-slate-950' : 'bg-white'} py-20 px-4 transition-colors duration-300`}>
         <div className="max-w-4xl mx-auto">
           <h2 className="text-5xl font-bold mb-6 text-center">Contact<span className={isDark ? 'text-cyan-400' : 'text-blue-500'}>.</span></h2>
-          <p className={`text-center mb-12 ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>Contact me or follow my social media</p>
+          <p className={`text-center mb-12 ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>Mening Ijtimoiy tarmoqdagi manzillarim</p>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {contacts.map((contact, i) => {
