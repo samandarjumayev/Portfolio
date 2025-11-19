@@ -33,11 +33,11 @@ export default function Header(){
                 {/* MD: Hide Menu */}
                 <div onClick={(e) => {
                     setHide(false);
-                }} className={`${hide ? `flex` : `hidden`} fixed bottom-0 left-0 backdrop-blur-[2px] w-full h-[calc(100vh-90px)] items-end`}>
+                }} className={`${hide ? `flex` : `hidden`} md:hidden fixed bottom-0 left-0 backdrop-blur-[2px] w-full h-[calc(100vh-90px)] items-end`}>
 
                     <div onClick={(e) => {
                         e.stopPropagation()
-                    }} className={`${isDark ? `bg-slate-950` : `bg-white border-slate-500`} md:hidden w-full mx-auto flex flex-col pb-5 px-13 rounded-tl-[20px] rounded-tr-[20px] shadow-[rgba(14,30,37,0.12)_0px_2px_4px_0px,rgba(14,30,37,0.32)_0px_2px_16px_0px] transition-all duration-300`}>
+                    }} className={`${isDark ? `bg-slate-950` : `bg-white border-slate-500`} w-full mx-auto flex flex-col pb-5 px-13 rounded-tl-[20px] rounded-tr-[20px] shadow-[rgba(14,30,37,0.12)_0px_2px_4px_0px,rgba(14,30,37,0.32)_0px_2px_16px_0px] transition-all duration-300`}>
                         <div className="w-full h-[25px] flex items-start justify-center mt-3">
                             <div className={`${isDark ? `bg-slate-700` : `bg-gray-300`} w-[60%] h-[7px] rounded-full transition-all duration-300`}></div>
                         </div>
