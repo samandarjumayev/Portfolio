@@ -109,12 +109,7 @@ export default function Home() {
       <section id="about" className={`${isDark ? 'bg-slate-900' : 'bg-slate-50'} py-10 px-4 transition-colors duration-300`}>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl font-bold text-center flex items-center justify-center gap-0">
-            <div>
-              About<span className={isDark ? 'text-cyan-400' : 'text-blue-500'}>Me.</span>
-            </div>
-            <div className='scale-50 flex items-center justify-center w-[250px] h-[250px]'>
-              <SmileAnimation />
-            </div>
+            About<span className={isDark ? 'text-cyan-400' : 'text-blue-500'}>Me.</span>
           </h2>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
