@@ -3,6 +3,7 @@ import { Mail, Github, Linkedin, Instagram, ArrowUpRight } from 'lucide-react';
 import { UserContext } from '../App';
 import myPhoto from '../images/Samandar.jpg';
 import SunCloud from '../ui/SunCloud';
+import SmileAnimation from '../ui/SmileAnimation';
 
 export default function Home() {
   // const [isDark, setIsDark] = useState(true);
@@ -106,17 +107,24 @@ export default function Home() {
       `}</style>
 
       {/* ABOUT SECTION */}
-      <section id="about" className={`${isDark ? 'bg-slate-900' : 'bg-slate-50'} py-20 px-4 transition-colors duration-300`}>
+      <section id="about" className={`${isDark ? 'bg-slate-900' : 'bg-slate-50'} py-10 px-4 transition-colors duration-300`}>
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-5xl font-bold mb-12 text-center">About<span className={isDark ? 'text-cyan-400' : 'text-blue-500'}>.</span></h2>
+          <h2 className="text-5xl font-bold text-center flex items-center justify-center gap-0">
+            <div>
+              About<span className={isDark ? 'text-cyan-400' : 'text-blue-500'}>Me.</span>
+            </div>
+            <div className='scale-50 flex items-center justify-center w-[250px] h-[250px]'>
+              <SmileAnimation />
+            </div>
+          </h2>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className={`${isDark ? 'bg-cyan-400' : 'bg-blue-400'} w-full h-74 rounded-lg transition-colors duration-300 overflow-hidden`}>
+            <div className={`${isDark ? 'bg-cyan-400' : 'bg-blue-400'} w-full h-76 rounded-lg transition-colors duration-300 overflow-hidden`}>
               <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" alt="" className='h-full w-full object-cover' />
             </div>
             
             <div className={`${isDark ? 'text-slate-300' : 'text-slate-700'} space-y-4 leading-relaxed`}>
-              <p className="text-lg font-semibold text-white">Web Developer transitioning to a career in technology.</p>
+              <p className="text-lg font-semibold text-white">Kuchli dasturchi bo'lish yo'lida izchil rivojlanayotgan dasturchi..</p>
               <p>Currently my focus is on learning and mastering essential web development skills. I have a solid foundation in HTML, CSS, Git and Javascript</p>
               <p>Currently my focus is on learning and mastering essential web development skills. I have a solid foundation in</p>
             </div>
