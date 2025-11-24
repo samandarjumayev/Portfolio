@@ -29,7 +29,7 @@ export default function Header(){
                     </button>
 
                     {isAuth ? (
-                        <NavLink to={'/profile'} className={`${isDark ? 'bg-orange-600 hover:bg-slate-700 ' : 'bg-blue-600 hover:bg-slate-300'} text-white h-[35px] w-[35px] flex items-center justify-center rounded-full transition-colors cursor-pointer`}>
+                        <NavLink title="Profile" to={'/profile'} className={`${isDark ? 'bg-orange-600 hover:bg-slate-700 ' : 'bg-blue-600 hover:bg-slate-300'} text-white h-[35px] w-[35px] flex items-center justify-center rounded-full transition-colors cursor-pointer`}>
                             <p className="text-[14px] font-semibold font-[cursive]">{user.name.slice(0, 1)}</p>
                         </NavLink>
                     ) : (

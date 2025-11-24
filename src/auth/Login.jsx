@@ -1,7 +1,7 @@
 import { useFormik } from "formik"
 import { LoginSchema } from "./LoginSchema"
-import { ArrowLeft, ArrowLeftFromLine, CircleArrowLeft, LogIn, SkipBack } from "lucide-react"
-import { NavLink } from "react-router-dom"
+import { ArrowLeft, LogIn } from "lucide-react"
+import { Navigate, NavLink, useNavigate } from "react-router-dom"
 
 const initialValues = {
     name: '',
@@ -11,6 +11,7 @@ const initialValues = {
 
 
 export default function Login(){
+    const navigate = useNavigate()
 
     const {values, handleChange, handleSubmit, handleBlur, errors, touched} = useFormik({
         initialValues,
@@ -18,7 +19,8 @@ export default function Login(){
         onSubmit: (value) => {
             console.log(value);
             localStorage.setItem('user', JSON.stringify(value));
-            localStorage.setItem('isAuth', true)
+            localStorage.setItem('isAuth', true);
+            navigate('/chat')
         }
     })
 
