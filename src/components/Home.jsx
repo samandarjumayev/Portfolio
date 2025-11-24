@@ -2,12 +2,9 @@ import { useContext, useState } from 'react';
 import { Mail, Github, Linkedin, Instagram, ArrowUpRight, Sun } from 'lucide-react';
 import { UserContext } from '../App';
 import SunCloud from '../ui/SunCloud';
-import SmileAnimation from '../ui/SmileAnimation';
-import SamandarAnimation from '../ui/SamandarAnimation';
 
 export default function Home() {
-  // const [isDark, setIsDark] = useState(true);
-  const {isDark, setIsDark} = useContext(UserContext);
+  const {isDark} = useContext(UserContext);
 
   const skills = ['HTML', 'CSS', 'SASS', 'Tailwind CSS', 'JavaScript', 'React JS', 'GitHub', 'Redux Toolkit'];
   
