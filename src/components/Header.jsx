@@ -1,6 +1,6 @@
 import { useContext, useState } from "react"
 import { UserContext } from "../App"
-import { Folder, Home, Info, InfoIcon, LogIn, Menu, Moon, Sun } from "lucide-react";
+import { BookUser, Folder, Home, Info, LogIn, Menu, MessageCircle, Moon, Sun } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 export default function Header(){
@@ -56,7 +56,8 @@ export default function Header(){
                         </div>
                         <div className={`w-full flex flex-col gap-[11px] my-6 transition-all duration-300`}>
                             <NavLink onClick={() => setHide(false)} to={'/'} className={`${isDark ? `` : `text-blue-500`} w-full border border-gray-400/40 shadow-md shadow-black-50 flex items-center justify-center py-2 rounded gap-2 transition-all duration-200 active:duration-70 active:scale-95`}><Home /> Home</NavLink>
-                            <NavLink onClick={() => setHide(false)} to={'/about'} className={`${isDark ? `` : `text-blue-500`} w-full border border-gray-400/40 shadow-md shadow-black-50 flex items-center justify-center py-2 rounded gap-2 transition-all duration-200 active:duration-70 active:scale-95`}><InfoIcon /> About</NavLink>
+                            <NavLink onClick={() => setHide(false)} to={'/about'} className={`${isDark ? `` : `text-blue-500`} w-full border border-gray-400/40 shadow-md shadow-black-50 flex items-center justify-center py-2 rounded gap-2 transition-all duration-200 active:duration-70 active:scale-95`}><BookUser /> About</NavLink>
+                            <NavLink onClick={() => setHide(false)} to={'/chat'} className={`${isDark ? `` : `text-blue-500`} w-full border border-gray-400/40 shadow-md shadow-black-50 flex items-center justify-center py-2 rounded gap-2 transition-all duration-200 active:duration-70 active:scale-95`}><MessageCircle /> Chat</NavLink>
                             <NavLink onClick={() => setHide(false)} to={'/projects'} className={`${isDark ? `` : `text-blue-500`} w-full border border-gray-400/40 shadow-md shadow-black-50 flex items-center justify-center py-2 rounded gap-2 transition-all duration-200 active:duration-70 active:scale-95`}><Folder /> Projects</NavLink>
                             <NavLink onClick={() => setHide(false)} to={'/'} className={`${isDark ? `` : `text-blue-500`} w-full border border-gray-400/40 shadow-md shadow-black-50 flex items-center justify-center py-2 rounded gap-2 text-red-600 transition-all duration-200 active:duration-70 active:scale-95`}><Info /> Report</NavLink>
                         </div>

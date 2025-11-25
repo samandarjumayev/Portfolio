@@ -66,7 +66,7 @@ export default function Login(){
                     onBlur={handleBlur}
                     className="border border-zinc-600 rounded w-full py-2 px-3 outline-none focus:ring-1"
                 />
-                <p className="text-[13px] text-red-600">{touched.email && errors.email}</p>
+                <p className="text-[13px] text-red-600">{touched.password && errors.password}</p>
             </div>
 
             <button type="submit" className="flex items-center justify-center gap-2 bg-blue-600 w-full text-white py-2 rounded font-semibold text-[20px] cursor-pointer transition-all duration-100 active:duration-60 active:scale-95">Kirish <LogIn /></button>
